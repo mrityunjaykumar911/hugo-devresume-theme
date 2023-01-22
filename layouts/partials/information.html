@@ -1,7 +1,7 @@
 
                             <section class="project-section py-3">
 
-                                <h3 class="text-uppercase resume-section-heading mb-4">{{ i18n "information" }}</h3>
+                                <h3 class="text-uppercase resume-section-heading mb-4">{{ i18n "papers" }}</h3>
 
                                 {{ range .Site.Params.information.list }}
                                 <div class="item mb-3">
@@ -10,11 +10,42 @@
                                     </div>
                                     <div class="item-content">
                                         <p>{{ with .details }}{{ . | markdownify }}{{ end }}</p>
-                                        <ul class="list-unstyled resume-skills-list">
+                                        <ol type="1">
                                             {{ range .items }}
-                                            <li class="mb-2">{{ with .details }}{{ . | markdownify }}{{ end }}</li>
+                                            
+                                                <li class="mb-2">
+                                                    {{ with .details }}
+                                                    {{ . | markdownify }}
+                                                    {{ end }} <a href="{{ .link }}">Paper Link</a>
+                                                </li>
+
+                                            <!-- </div> -->
                                             {{ end }}
-                                        </ul>
+                                        </ol>
+                                    </div>
+                                </div><!--//item-->
+                                {{ end }}
+
+                                {{ range .Site.Params.innovation.list }}
+                                <div class="item mb-3">
+                                    <div class="item-heading row align-items-center mb-2">
+                                        <h4 class="item-title col-12 col-md-12 col-lg-12 mb-2 mb-md-0">{{ .title }}</h4>
+                                    </div>
+                                    <div class="item-content">
+                                        <p>{{ with .details }}{{ . | markdownify }}{{ end }}</p>
+                                        <ol type="1">
+                                            {{ range .items }}
+                                                {{ if .enabled }}
+                                                <li class="mb-2">{{ .details }}
+                                                    <span class="text-muted">
+                                                        <i>({{ .contributions }})</i>
+                                                        <b>{{ .institute }} {{ .year }} </b>
+                                                    </span>
+                                                </li>
+                                                {{ end }}
+                                            <!-- </div> -->
+                                            {{ end }}
+                                        </ol>
                                     </div>
                                 </div><!--//item-->
                                 {{ end }}

@@ -109,16 +109,22 @@ a.theme-link {
    }
 }
 
-.resume-name {
-	font-size: 2.75rem;
-	font-weight: 900;
-	letter-spacing: 0.4rem;
-	color: $theme-color-primary;
+.resume-name-super {
+	font-size: 1.29rem;
+	font-weight: 500;
+	letter-spacing: 0.3rem;
+	color: black;
+}
 
+.resume-name {
+	font-size: 2.15rem;
+	font-weight: 1200;
+	letter-spacing: 0.2rem;
+	color: $theme-color-primary;
 }
 
 .resume-tagline {
-	font-size: 1.25rem;
+	font-size: 1.15rem;
 	font-weight: 300;
 }
 

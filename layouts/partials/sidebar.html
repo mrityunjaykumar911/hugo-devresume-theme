@@ -6,13 +6,14 @@
                             {{ partial "education.html" . }}
                             {{ end }}
 
+                            {{ if .Site.Params.skills.enable }}
+                            {{ partial "skills.html" . }}
+                            {{ end }}
+
                             {{ if .Site.Params.awards.enable }}
                             {{ partial "awards.html" . }}
                             {{ end }}
 
-                            {{ if .Site.Params.skills.enable }}
-                            {{ partial "skills.html" . }}
-                            {{ end }}
 
                             {{ if .Site.Params.languages.enable }}
                             {{ partial "languages.html" . }}
@@ -20,6 +21,10 @@
 
                             {{ if .Site.Params.interests.enable }}
                             {{ partial "interests.html" . }}
+                            {{ end }}
+
+                            {{ if .Site.Params.interview.enable }}
+                            {{ partial "interviews.html" . }}
                             {{ end }}
 
                         </aside><!--//resume-aside-->

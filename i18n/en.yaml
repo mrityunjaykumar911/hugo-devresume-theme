@@ -2,8 +2,10 @@
   translation: Awards
 - id: education
   translation: Education
+- id: research_experiences
+  translation: Research Experience
 - id: experiences
-  translation: Work Experience
+  translation: Previous Experience
 - id: information
   translation: Information
 - id: interests
@@ -14,3 +16,9 @@
   translation: Projects
 - id: skills
   translation: Skills
+- id: papers
+  translation: Research Papers
+- id: interview
+  translation: Book an interview
+- id: current_experience
+  translation: Current Experience
